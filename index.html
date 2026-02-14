@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Aşkını Kanıtla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="screen-start" class="screen active">
+            <h1 class="title-bounce">Aşk Testi 💕</h1>
+            <p class="subtitle">Beni ne kadar seviyorsun?</p>
+            <p class="instruction">Kanıtlamak için 4 görevi tamamla Melek!</p>
+            <button id="btn-start" class="btn-primary">Testi Başlat</button>
+        </div>
+
+        <!-- Level 1: The Chase -->
+        <div id="screen-level-1" class="screen">
+            <h2 class="level-title">Seviye 1: Beni Yakala!</h2>
+            <p class="level-desc">Kalbi yakalamak o kadar kolay değil kolsuz MELEK...</p>
+            <div id="chase-area">
+                <button id="btn-chase">❤️</button>
+            </div>
+        </div>
+
+        <!-- Level 2: The Maze -->
+        <div id="screen-level-2" class="screen">
+            <h2 class="level-title">Seviye 2: Engelleri Aş</h2>
+            <p class="level-desc">Mavi noktayı tut ve kırmızıya değmeden kalbe götür!</p>
+            <div id="maze-container">
+                <div class="maze-wall" style="top: 0; left: 0; width: 100%; height: 20px;"></div>
+                <div class="maze-wall" style="bottom: 0; left: 0; width: 100%; height: 20px;"></div>
+                <div class="maze-wall" style="top: 0; left: 0; width: 20px; height: 100%;"></div>
+                <div class="maze-wall" style="top: 0; right: 0; width: 20px; height: 100%;"></div>
+
+                <!-- Annoying Obstacles -->
+                <div class="maze-wall moving-wall-1"></div>
+                <div class="maze-wall moving-wall-2"></div>
+
+                <div id="maze-start" class="maze-point">🔵</div>
+                <div id="maze-end" class="maze-point">❤️</div>
+                <div id="maze-player"></div>
+            </div>
+        </div>
+
+        <!-- Level 3: The Typist -->
+        <div id="screen-level-3" class="screen">
+            <h2 class="level-title">Seviye 3: Kusursuz Aşk</h2>
+            <div id="level3-timer">10</div>
+            <p class="level-desc">10 Saniye içinde <u>HATASIZ</u> yaz!</p>
+            <div class="target-text-container">
+                <p id="target-text">Seni Dünyalar Kadar Seviyorum Furkanımmmmm</p>
+            </div>
+            <input type="text" id="input-love" placeholder="Buraya yaz..." autocomplete="off">
+            <p id="error-msg" class="hidden">HATA! BAŞTAN YAZ! 😈</p>
+        </div>
+
+        <!-- Level 4: Kiss Storm -->
+        <div id="screen-level-4" class="screen">
+            <h2 class="level-title">Seviye 4: Öpücük Yağmuru</h2>
+            <p class="level-desc">Barı doldurmak için seri tıkla! Durursan düşer! 💋</p>
+            <div class="progress-container">
+                <div id="kiss-progress"></div>
+            </div>
+            <div class="kiss-counter">0%</div>
+            <button id="btn-kiss">😘 ÖPÜCÜK GÖNDER! 😘</button>
+        </div>
+
+        <!-- Victory Screen -->
+        <div id="screen-victory" class="screen">
+            <h1 class="victory-title">TEBRİKLER! 💖</h1>
+            <div class="heart-explosion">💖</div>
+            <p class="victory-msg">Sinir krizi geçirmeden bana olan aşkını kanıtladın!</p>
+            <p class="victory-sub">Seni Seviyorum!</p>
+            <button id="btn-restart" class="btn-secondary">Tekrar Oyna (Neden?)</button>
+        </div>
+    </div>
+
+    <!-- Audio Effects (Optional interactions) -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
